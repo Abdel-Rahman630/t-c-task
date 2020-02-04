@@ -1,0 +1,123 @@
+.sidebar {
+    background-color: #140e30;
+    height: 100vh;
+    width: 450px;
+    position: fixed;
+    text-transform: uppercase;
+    left: 0;
+    padding: 30px 20px 0 30px;
+    transition: $mainTransition;
+    -webkit-transition: $mainTransition;
+    -moz-transition: $mainTransition;
+    -ms-transition: $mainTransition;
+    -o-transition: $mainTransition;
+    .icon {
+        padding-top: 5px;
+        width: 35px;
+        float: right;
+        cursor: pointer;
+        height: 25px;
+        span {
+            background-color: white;
+            float: right;
+            width: 30px;
+            height: 2px;
+            display: block;
+            &.span1 {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+            }
+            &.span2 {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                margin-top: -2px;
+            }    
+        }
+    }
+    ul {
+        margin-bottom: 0;
+        &.parent {
+            margin-left: 70px;
+            height: 100%;
+            margin-top: 40px;
+            li {
+                font-size: 17px;
+                padding: 8px 0;
+                position: relative;
+                a {
+                    color: white;
+                }
+                &:hover {
+                    a {   
+                        color: $mainColor;
+                        transition: $mainTransition;
+                        -webkit-transition: $mainTransition;
+                        -moz-transition: $mainTransition;
+                        -ms-transition: $mainTransition;
+                        -o-transition: $mainTransition;
+                    }
+                }
+                .child {
+                    li {
+                        a {
+                            color: #b6b4bd;
+                            &:hover {
+                                color: $mainColor;
+                                transition: $mainTransition;
+                                -webkit-transition: $mainTransition;
+                                -moz-transition: $mainTransition;
+                                -ms-transition: $mainTransition;
+                                -o-transition: $mainTransition;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.child {
+            margin-left: 20px;
+            li {
+                font-size: 12px;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.left {
+    left: -450px;
+}
+
+.none {
+    display: none;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background: $mainColor;
+    left: -70px;
+    top: 21px;
+}
+
+
+
+// Start media
+@media #{$verySmall} {
+    .sidebar {
+        width: 100%;
+    }
+    .left {
+        left: -580px;
+    }
+}

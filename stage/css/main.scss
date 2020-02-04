@@ -1,3 +1,4 @@
-.parent {
-    width: 100%;
-}
+@import "sass/variables/_variables.scss";
+
+@import "sass/layout/_global.scss";
+@import "sass/layout/_sidebar.scss"

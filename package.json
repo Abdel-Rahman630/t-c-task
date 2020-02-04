@@ -21,5 +21,9 @@
   },
   "dependencies": {
     "static-server": "^2.2.1"
-  }
+  },
+  "browswelist": [
+    "last 2 version",
+    "> 2%"
+  ]
 }

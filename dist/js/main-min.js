@@ -1,1 +1,1 @@
-$(document).redy(function(){});
+$(document).ready(function(){$(".sidebar .icon").click(function(){$(".sidebar").addClass("left")}),$(".sidebar ul li").click(function(){$(this).addClass("active").siblings().removeClass("active")}),$(".sidebar ul li").click(function(){$(this).children("ul").slideToggle(500)})});
