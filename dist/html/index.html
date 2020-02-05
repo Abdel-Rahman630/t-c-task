@@ -45,7 +45,7 @@
           </ul>
         </li>
         <li> <a href="#">our imact</a>
-          <ul class="list-unstyled none">
+          <ul class="list-unstyled none child">
             <li> <a href="sustainability.pug">sustainability</a></li>
             <li> <a href="csr.pug">csr</a></li>
           </ul>
@@ -59,9 +59,51 @@
         <li> <a href="contact-us.pug">contact us                   </a></li>
       </ul>
     </div>
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">     
+            <div class="bar">      <span></span><span></span><span></span></div>
+          </div>
+          <div class="col-xs-6 search"><i class="fa fa-search" aria-hidden="true">               </i></div>
+        </div>
+      </div>
+    </nav>
+    <div class="input-search">
+      <div class="icon icon2"><span class="span1"></span><span class="span2"></span></div>
+      <div class="parent"><i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" placeholder="Search"/>
+      </div>
+    </div>
+    <header>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="E:/works/Icclients/dist/imgs/VIDEO.gif" alt=""/></div>
+          <div class="swiper-slide"><img src="E:/works/Icclients/dist/imgs/1.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="E:/works/Icclients/dist/imgs/2.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="E:/works/Icclients/dist/imgs/3.jpg" alt=""/></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </header>
   </div>
   <Script src="E:/works/Icclients/dist/js/jquery-3.4.1.min.js"></Script>
   <script src="https://unpkg.com/swiper/js/swiper.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <Script src="E:/works/Icclients/dist/js/main.js"></Script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    $(".swiper-container").height($(window).height())
+  </script>
 </body>

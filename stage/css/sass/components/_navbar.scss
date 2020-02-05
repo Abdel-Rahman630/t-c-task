@@ -1,0 +1,27 @@
+nav {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 88888;
+    .bar {
+        cursor: pointer; 
+        float: left; 
+        span {
+            display: block;
+            background: white;
+            margin-bottom: 5px;
+            width: 30px;
+            height: 3px;      
+        }
+    }
+    .search  {
+        i {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;  
+            color: white;      
+        }
+    }
+}

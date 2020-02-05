@@ -9,4 +9,23 @@
     body
         .page.home-page
             include layout/sidebar.pug
+            include components/navbar.pug
+            include components/search.pug
+            include layout/home-header.pug
         include layout/scripts.pug
+        script.
+            var swiper = new Swiper('.swiper-container', {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+            $(".swiper-container").height($(window).height())
+
+
