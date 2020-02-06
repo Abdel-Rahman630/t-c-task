@@ -12,36 +12,6 @@
     -ms-transition: $mainTransition;
     -o-transition: $mainTransition;
     z-index: 555555555555555;
-    // .icon {
-    //     padding-top: 5px;
-    //     width: 35px;
-    //     float: right;
-    //     cursor: pointer;
-    //     height: 25px;
-    //     span {
-    //         background-color: white;
-    //         float: right;
-    //         width: 30px;
-    //         height: 2px;
-    //         display: block;
-    //         cursor: pointer;
-    //         &.span1 {
-    //             transform: rotate(45deg);
-    //             -webkit-transform: rotate(45deg);
-    //             -moz-transform: rotate(45deg);
-    //             -ms-transform: rotate(45deg);
-    //             -o-transform: rotate(45deg);
-    //         }
-    //         &.span2 {
-    //             transform: rotate(-45deg);
-    //             -webkit-transform: rotate(-45deg);
-    //             -moz-transform: rotate(-45deg);
-    //             -ms-transform: rotate(-45deg);
-    //             -o-transform: rotate(-45deg);
-    //             margin-top: -2px;
-    //         }    
-    //     }
-    // }
     .icon {
         @include icon
     }
@@ -105,7 +75,7 @@
     display: none;
 }
 
-.active::before {
+.sidebar .active::before {
     content: "";
     position: absolute;
     height: 2px;
@@ -121,8 +91,11 @@
 @media #{$verySmall} {
     .sidebar {
         width: 100%;
+        left: -570px;
     }
+
     .left {
-        left: -580px;
+        left: 0 !important;
     }
+
 }

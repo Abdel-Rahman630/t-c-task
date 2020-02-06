@@ -57,4 +57,17 @@ $(document).ready(function () {
         $(this).attr('placeholder', "Search")
 
     })
+
+    /**************************** Video Section *******************************************/
+    $(".owl-carousel .item .img-content span").click(function () {
+
+        $(".video").fadeIn(300)
+
+    })
+
+    $(".video .icon").click(function () {
+
+        $(this).parent(".video").fadeOut(300)
+
+    })
 })

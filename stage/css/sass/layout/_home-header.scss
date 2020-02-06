@@ -1,0 +1,103 @@
+.owl-carousel {
+    .owl-stage-outer {
+        height: 100%;
+    }
+    .item {
+        position: relative;
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(10, 15, 86, .65);
+            .container {
+                height: 100%;
+                position: relative;
+                .img-content {
+                    color: white;
+                    top: 38%;
+                    position: absolute;
+                    text-transform: uppercase;
+                    h1 {
+                        margin: 0;
+                        line-height: 1.2;
+                        font-size: 33px;
+                        font-weight: 900;
+                    }
+                    span {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 15px;
+                        font-size: 17px;
+                        font-weight: 900;
+                        color: $mainColor;
+                        cursor: pointer;
+                        i {
+                            font-size: 35px;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+                .row-bottom {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 7%;
+                    img {
+                        width: 65px;
+                        height: auto !important;
+                    }
+                    p {
+                        margin: 0;
+                        color: white;
+                        display: inline-flex;
+                        transform: rotate(90deg);
+                        -webkit-transform: rotate(90deg);
+                        -moz-transform: rotate(90deg);
+                        -ms-transform: rotate(90deg);
+                        -o-transform: rotate(90deg);
+                        cursor: pointer;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        position: absolute;
+                        right: -47px;
+                        bottom: -35px;                    
+                        i {
+                            color: $mainColor;
+                            padding-left: 20px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        .owl-dot {
+            outline: none !important;
+            span {
+                width: 25px !important;
+                height: 3px !important;
+                background: white !important;
+                transition: none !important;
+                border-radius: 0 !important;
+                -webkit-border-radius: 0 !important;
+                -moz-border-radius: 0 !important;
+                -ms-border-radius: 0 !important;
+                -o-border-radius: 0 !important;
+                -webkit-transition: none !important;
+                -moz-transition: none !important;
+                -ms-transition: none !important;
+                -o-transition: none !important;
+            }
+            &.active {
+                span {
+                    background: $mainColor !important;
+                }
+            }
+        }
+    }
+}

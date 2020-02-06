@@ -3,7 +3,7 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 25px 10px;
     z-index: 88888;
     .bar {
         cursor: pointer; 
@@ -11,9 +11,9 @@ nav {
         span {
             display: block;
             background: white;
-            margin-bottom: 5px;
-            width: 30px;
-            height: 3px;      
+            margin-bottom: 8px;
+            width: 33px;
+            height: 2px;  
         }
     }
     .search  {
