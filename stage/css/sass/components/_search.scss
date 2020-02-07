@@ -6,13 +6,15 @@
     height: 100%;
     background-color: rgba(10,15,86,0.8);
     z-index: 7777777777;
-    padding: 40px;
     display: none;    
     .icon {
         @include icon;
-        padding-top: 15px;
         width: 40px;
         height: 40px;
+        z-index: 99999999999999999999;
+        position: absolute;
+        right: 35px;
+        top: 35px;
         span {
             width: 33px;
             height: 3px;
@@ -25,45 +27,87 @@
         height: 100%;
         position: relative;
         .parent {
-            position: absolute;
             width: 100%;
+            position: relative;
             height: 100%;
-            top: 20%;
+            margin: auto;
             .child-search {
-                border-radius: 5px;
                 background: white;
-                display: flex;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                border-radius: 5px;
+                position: absolute;
+                top: 27%;
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%, -50%);
+                margin-left: 0;
                 i {
                     color: black;
                     cursor: pointer;
-                    padding: 18px 25px 18px 35px;
-                    font-size: 22px;            
+                    padding: 15px 30px;
+                    font-size: 22px;
+                    text-align: center;            
                 }
                 input {
                     width: 92%;
                     border: none;
-                    padding: 10px 0 10px 16px;
+                    padding: 10px 0 10px 20px;
                     outline: none;
                     font-size: 22px;
                 }
             }
+
+            }
         }
     }
-}
 
 @media #{$maxLarge} {
     .input-search {
         .parent {
-            margin: 15% auto;
+            width: 85% !important;
+            .child-search {
+                top: 35% !important;
+                input {
+                    width: 89% !important
+                }
+            }
         }
     }   
 }
 
-@media #{$maxLarge} {
+
+@media #{$maxSmall} {
     .input-search {
         .parent {
-            margin: 20% auto;
-            width: 95%;
+            width: 100% !important;
+            i  {
+                padding: 15px 25px  !important;
+            }
+            .child-search {
+                input {
+                    width: 87% !important
+                }
+            }
         }
     }   
 }
+
+@media #{$verySmall} {
+    .input-search {
+        .parent {
+            i  {
+                padding: 15px 10px 15px 0  !important;
+            }
+            .child-search {
+                top: 50% !important;
+                input {
+                    width: 84% !important
+                }
+            }
+        }
+    }   
+}
+

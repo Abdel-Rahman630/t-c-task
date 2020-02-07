@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+    /********************************** Fixed Nav *******************************************/
+    // Fixed nav
+    $(window).scroll(function () {
+
+        if ($(this).scrollTop() > $(".home-header").height()) {
+
+            $("nav").addClass("fixed-nav")
+
+        } else {
+
+            $("nav").removeClass("fixed-nav")
+
+        }
+
+    })
+
     /********************************* SideBar ************************************/
 
     // Toggle Slider
@@ -68,6 +84,20 @@ $(document).ready(function () {
     $(".video .icon").click(function () {
 
         $(this).parent(".video").fadeOut(300)
+
+    })
+
+    /***************************** scroll to our-story **********************************/
+    
+    $(".home-header  a.scroll").click( function (e) {
+
+        e.preventDefult
+
+        $("html, body").animate({
+
+            scrollTop: $( "." + $(this).data('scroll')).offset().top + 1
+        
+        }, 1000)
 
     })
 })

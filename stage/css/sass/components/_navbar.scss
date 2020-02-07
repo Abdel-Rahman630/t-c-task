@@ -5,6 +5,11 @@ nav {
     width: 100%;
     padding: 25px 10px;
     z-index: 88888;
+    transition: $mainTransition;
+    -webkit-transition: $mainTransition;
+    -moz-transition: $mainTransition;
+    -ms-transition: $mainTransition;
+    -o-transition: $mainTransition;
     .bar {
         cursor: pointer; 
         float: left; 
@@ -16,12 +21,47 @@ nav {
             height: 2px;  
         }
     }
+    img {
+        display: none;
+    }
     .search  {
         i {
             float: right;
             cursor: pointer;
-            font-size: 20px;  
+            font-size: 18px;  
             color: white;      
         }
+    }
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(20, 14, 48);
+    transition: $mainTransition;
+    -webkit-transition: $mainTransition;
+    -moz-transition: $mainTransition;
+    -ms-transition: $mainTransition;
+    -o-transition: $mainTransition;
+    padding: 20px;
+    .bar {
+        margin-top: 12px;
+    }
+    img {
+        display: inline-block;
+        width: 35px;
+        margin-left: 25px;
+    }
+    i {
+        margin-top: 15px;
+    }
+}
+
+/******************** Media Qurey *************************/
+@media #{$maxSmall} {
+    nav .container {
+        margin: auto;
+        width: 75%;
     }
 }
