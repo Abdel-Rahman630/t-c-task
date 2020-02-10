@@ -28,3 +28,104 @@
         }    
     }
 }
+
+@mixin read-more {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-top: 15px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #eb1f25;
+        cursor: pointer;
+        i {
+            font-size: 35px;
+            padding-left: 15px;
+        }
+}
+
+@mixin title {
+    margin: 0;
+    font-weight: 900;
+    color: $secondColor;
+    text-transform: uppercase;
+    span {
+        display: block;
+        color: $mainColor;
+        padding: 5px 0 15px;
+    }
+}
+
+@mixin img-content {
+    margin: 100px 0;
+    overflow: hidden;
+    h3 {
+        @include title
+    }
+    p {
+        color: $pColor;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: bold;
+        margin: 0;
+    }
+    a {
+        -webkit-box-align: center;
+        align-items: center;
+        color: $mainColor;
+        text-decoration: none;
+        float: right;
+        font-size: 17px;
+        font-weight: normal;
+        opacity: 0.9;
+        margin-top: 40px;
+        transition: $mainTransition;
+        -webkit-transition: $mainTransition;
+        -moz-transition: $mainTransition;
+        -ms-transition: $mainTransition;
+        -o-transition: $mainTransition;
+        margin-right: 10px;
+        &:hover {
+            margin-right: 0;
+        }
+        i {
+            background: $mainColor;
+            color: white;
+            padding-left: 0;
+            margin-left: 15px;
+            font-size: 15px;
+            padding: 12px;
+            border-radius: 50%;
+        }
+    }
+}
+
+@mixin bullets {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    .owl-dot {
+        outline: none !important;
+        span {
+            width: 25px !important;
+            height: 3px !important;
+            background: white !important;
+            transition: none !important;
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            -ms-border-radius: 0 !important;
+            -o-border-radius: 0 !important;
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -ms-transition: none !important;
+            -o-transition: none !important;
+        }
+        &.active {
+            span {
+                background: $mainColor !important;
+            }
+        }
+    }
+}

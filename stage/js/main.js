@@ -93,11 +93,28 @@ $(document).ready(function () {
 
         e.preventDefult
 
-        $("html, body").animate({
+        $('html, body').animate({
 
-            scrollTop: $( "." + $(this).data('scroll')).offset().top + 1
-        
-        }, 1000)
+            scrollTop: $('main').offset().top + 1
+
+        },500); 
 
     })
+
+    /**************************** our clients section **********************************/
+    $(".our-clients .imgs").hover( function () {
+
+        $(this).children("img.img1").css("display", "none"),
+        $(this).children("img.img2").css("display", "block");
+
+    }, function () {
+        $(this).children("img.img1").css("display", "block"),
+        $(this).children("img.img2").css("display", "none");   
+    })
 })
+
+// $("p").hover(function(){
+//     $(this).css("background-color", "yellow");
+//     }, function(){
+//     $(this).css("background-color", "pink");
+//   });

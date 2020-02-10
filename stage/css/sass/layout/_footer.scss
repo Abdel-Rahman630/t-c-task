@@ -1,0 +1,183 @@
+footer {
+    padding: 65px 0 0;
+    .icons {
+        text-align: center;
+        .img {
+            img {
+                width: auto;
+                max-width: 120px;
+            }
+        }
+        .social-icon {
+            padding-top: 25px;
+            li {
+                display: inline-block;
+                margin-left: 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 21px;
+                    color: $pColor;
+                }
+            }
+        }
+    }
+    .links {
+        h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;            
+        }
+        li {
+            a {
+                color: $pColor;
+                margin: 3px 0;
+                display: inline-block;
+                text-decoration: none;
+                transition: $mainTransition;
+                -webkit-transition: $mainTransition;
+                -moz-transition: $mainTransition;
+                -ms-transition: $mainTransition;
+                -o-transition: $mainTransition;
+                text-transform: capitalize;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 1.5px;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: $secondColor;
+                    transition: $mainTransition;
+                    -webkit-transition: $mainTransition;
+                    -moz-transition: $mainTransition;
+                    -ms-transition: $mainTransition;
+                    -o-transition: $mainTransition;
+                }
+                &:hover {
+                    color: $mainColor;
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .contact-us {
+        h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;            
+        }
+        a {
+            color: $pColor;
+            text-decoration: none;
+            display: flex;
+            i {
+                padding-top: 5px;
+                padding-right: 10px;
+                font-size: 20px;
+                &.fa-envelope {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+    .copyright {
+        color: $pColor;
+        border-top: 2px solid rgba(89, 87, 86, 0.47);
+        padding: 10px 0 0;
+        margin-top: 25px;
+        a {
+            color: $pColor;
+            text-decoration: none;
+            padding-left: 5px;
+        }
+    }
+}
+
+/******************** media query ***********************/
+@media #{$maxLarge} {
+    footer {
+        h4 {
+            margin-top: 15px !important;
+        }
+        .our-impact-links {
+            text-align: center;
+        }
+    }
+} 
+
+@media #{$maxSmall} {
+    footer {
+        text-align: center !important;
+        .our-impact-links {
+            height: 216px;
+        }
+        .contact-us {
+            a {
+                position: relative;
+                i {
+                    padding-right: 0 !important;
+                    padding-top: 0 !important;
+                    font-size: 18px !important;
+                    position: absolute;
+                    left: 0;
+                }
+                p {
+                    width: 100%;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$maxMobile} {
+    footer {
+        .contact-us {
+            a {
+                i {
+                    left: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        .grid-footer {
+            width: 100% !important;
+            .links, 
+            .contact-us {
+                width: 55%;
+                margin: auto;            
+            }
+            .contact-us {
+                i {
+                    left: 15px !important;
+                }
+            }
+        }
+        .our-impact-links {
+            height: auto !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    footer {
+        .grid-footer {
+            .contact-us {
+                i {
+                    left: -20px !important;
+                }
+            }
+        }
+    }
+}
+

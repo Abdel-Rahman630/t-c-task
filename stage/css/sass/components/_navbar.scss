@@ -61,7 +61,24 @@ nav {
 /******************** Media Qurey *************************/
 @media #{$maxSmall} {
     nav .container {
-        margin: auto;
-        width: 75%;
+        margin: auto !important;
+        width: 75% !important;
+
+    }
+    .fixed-nav {
+        padding: 15px !important;
+        .bar {
+            span {
+                width: 30px !important;
+            }
+        }
+        img {
+            width: 25px !important;
+            margin-top: 5px !important;
+        }
+        i {
+            margin-top: 12px;
+        }
     }
 }
+

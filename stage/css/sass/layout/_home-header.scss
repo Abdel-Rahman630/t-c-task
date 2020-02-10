@@ -27,17 +27,7 @@
                             font-weight: 900;
                         }
                         span {
-                            display: flex;
-                            align-items: center;
-                            margin-top: 15px;
-                            font-size: 17px;
-                            font-weight: 900;
-                            color: $mainColor;
-                            cursor: pointer;
-                            i {
-                                font-size: 35px;
-                                padding-left: 15px;
-                            }
+                            @include read-more;
                         }
                     }
                     .row-bottom {
@@ -75,32 +65,7 @@
             }
         }
         .owl-dots {
-            position: absolute;
-            bottom: 5px;
-            width: 100%;
-            .owl-dot {
-                outline: none !important;
-                span {
-                    width: 25px !important;
-                    height: 3px !important;
-                    background: white !important;
-                    transition: none !important;
-                    border-radius: 0 !important;
-                    -webkit-border-radius: 0 !important;
-                    -moz-border-radius: 0 !important;
-                    -ms-border-radius: 0 !important;
-                    -o-border-radius: 0 !important;
-                    -webkit-transition: none !important;
-                    -moz-transition: none !important;
-                    -ms-transition: none !important;
-                    -o-transition: none !important;
-                }
-                &.active {
-                    span {
-                        background: $mainColor !important;
-                    }
-                }
-            }
+            @include bullets
         }
     }
 }
@@ -146,7 +111,7 @@
             img {
                 width: 40px !important;
             }
-            p.scroll {
+            a.scroll {
                 bottom: 0 !important;
             }
         }
