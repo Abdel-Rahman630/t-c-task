@@ -513,6 +513,7 @@
     }
     .swiper-container {
         width: 100%;
+        z-index: 0 !important;
         height: 100%;
         .swiper-slide {
             font-size: 18px;

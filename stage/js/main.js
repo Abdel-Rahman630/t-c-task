@@ -1,4 +1,14 @@
+$("body").niceScroll({
+    cursorcolor: "#eb1f25",
+    cursorborder: "none",
+    cursorwidth: '9px',
+    background: "#c4d9ff",
+    autohidemode: false,
+    zindex: "99999"
+});
 $(document).ready(function () {
+
+
 
     /********************************** Fixed Nav *******************************************/
     // Fixed nav
@@ -112,9 +122,3 @@ $(document).ready(function () {
         $(this).children("img.img2").css("display", "none");   
     })
 })
-
-// $("p").hover(function(){
-//     $(this).css("background-color", "yellow");
-//     }, function(){
-//     $(this).css("background-color", "pink");
-//   });
